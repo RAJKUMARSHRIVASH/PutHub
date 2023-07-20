@@ -1,4 +1,4 @@
-.homepage {
+/* .homepage {
     padding: 40px;
     background-color: aliceblue;
 }
@@ -38,6 +38,85 @@
 .imageSection img {
     max-width: 100%;
     height: auto;
+    border-radius: 1rem;
+}
+
+.imageSection img:hover {
+   filter:brightness(96%);
+   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .homepage {
+        padding: 60px;
+    }
+
+    .hero {
+        margin-bottom: 60px;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .featureCard {
+        width: calc(33.33% - 40px);
+        margin-bottom: 0;
+    }
+} */
+
+
+/* ---------------------------- */
+
+.homepage {
+    padding: 40px;
+    background-color: aliceblue;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featureCard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.imageSection {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.imageSection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.imageSection img:hover {
+   filter:brightness(96%);
+   cursor: pointer;
 }
 
 /* Styles for larger screens */
@@ -60,5 +139,33 @@
     .featureCard {
         width: calc(33.33% - 40px);
         margin-bottom: 0;
+    }
+}
+
+/* Styles for tablet and mobile screens */
+@media screen and (max-width: 767px) {
+    .homepage {
+        padding: 20px;
+    }
+
+    .hero {
+        margin-bottom: 20px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .featureCard {
+        max-width: 100%;
+        margin-bottom: 0;
+    }
+
+    .imageSection {
+        width: 100%;
+        grid-template-columns: none;
+        gap: 1rem;
     }
 }

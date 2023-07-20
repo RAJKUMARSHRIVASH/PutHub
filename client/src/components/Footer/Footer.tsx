@@ -101,11 +101,12 @@ const Footer: React.FC = () => {
           </div>
           <hr style={{ width: '100%', margin: "auto", marginTop: '2vh' }} />
           <br />
-          <div id="lastest">
+          <div id={styles.latest}>
             <p style={{ fontSize: 'small' }}>©2023 PutHub. All rights reserved. Terms of Use Privacy Site Index Ad
               Choices Co-Browse
               If you are using a screen reader and are having problems using this website, please call (800)
-              967-6696 for assistance.</p>
+              967-6696 for assistance.
+            </p>
           </div>
           <br />
 
