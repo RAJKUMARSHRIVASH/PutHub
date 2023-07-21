@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styles from './Login.module.css';
 import { Link } from 'react-router-dom';
 
+// useNavigate("/login") this can also be used to to navigate between pages
+// useNavigate can be imported from 'react-router-dom'
 const Login: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -41,7 +43,7 @@ const Login: React.FC = () => {
         <button type="submit">Login</button>
       </form>
       <div className={styles.navigate}>
-        <p>You don't have account? <Link className={styles.signBtn} to='/signup'>Signup 👈</Link></p>
+        <p>Don't have an account? <Link className={styles.signBtn} to='/signup'>Signup 👈</Link></p>
       </div>
     </div>
   );

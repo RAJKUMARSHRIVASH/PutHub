@@ -57,7 +57,7 @@ const Signup: React.FC = () => {
         <button type="submit">Signup</button>
       </form>
       <div className={styles.navigate}>
-        <p>You don't have account? <Link className={styles.signBtn} to='/login'>Login 👈</Link></p>
+        <p>Have you registered already? <Link className={styles.signBtn} to='/login'>Login 👈</Link></p>
       </div>
     </div>
   );
