@@ -1,31 +1,34 @@
-import React, { useState } from "react";
-import backtotop from '../../assets/top.png'
-import styles from './BackToTop.module.css'
+import { useState, useEffect } from "react";
+import backtotop from "../../assets/top.png";
+import styles from "./BackToTop.module.css";
 
 const BackToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [active, setActive] = useState<boolean>(true);
 
-  if (window.scrollY >= 200) {
-    setIsVisible(true)
-  }
-  else {
-    setIsVisible(false);
-  }
-  if (!isVisible) {
-    document.querySelector(".topIcon")?.classList.remove("active");
-  }
-  else {
-    document.querySelector(".topIcon")?.classList.add("active");
-  }
-  
   const handleClick = () => {
-    window.scrollY = 0;
-    setIsVisible(false);
-   
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleScroll = () => {
+    console.log(window.scrollY);
+
+    if (window.scrollY >= 400) {
+      setActive(true)
+    }
+    else {
+      setActive(false)
+    }
+  };
+
+  document.addEventListener("scroll", () => {
+    handleScroll()
+  })
+
   return (
-    <div className={styles.topIcon} onClick={handleClick}>
+    <div
+      className={active ? styles.topIcon : `${styles.topIcon} ${styles.inactive}`}
+      onClick={handleClick}
+    >
       <img src={backtotop} alt="back to top button" />
     </div>
   );

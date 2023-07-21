@@ -1,20 +1,27 @@
-body{
+body {
   position: relative;
 }
 
-.topIcon{
+.topIcon {
   display: inline-block;
   position: fixed;
   bottom: 10px;
   right: 10px;
   z-index: 500;
-  visibility: hidden;
+  
 }
 
-.topIcon.active{
-  visibility: visible;
+.topIcon.inactive {
+  display: none;
 }
 
-.topIcon img{
+.topIcon img {
   width: 40px;
+  transition: 0.5s;
+}
+
+.topIcon img:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+  transition: 0.5s;
 }
