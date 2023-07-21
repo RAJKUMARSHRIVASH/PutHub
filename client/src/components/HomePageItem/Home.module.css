@@ -1,75 +1,4 @@
-/* .homepage {
-    padding: 40px;
-    background-color: aliceblue;
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.features {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.featureCard {
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.featureIcon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.imageSection {
-    text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    width: 80%;
-    margin: auto;
-}
-
-.imageSection img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-}
-
-.imageSection img:hover {
-   filter:brightness(96%);
-   cursor: pointer;
-}
-
-@media screen and (min-width: 768px) {
-    .homepage {
-        padding: 60px;
-    }
-
-    .hero {
-        margin-bottom: 60px;
-    }
-
-    .features {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-
-    .featureCard {
-        width: calc(33.33% - 40px);
-        margin-bottom: 0;
-    }
-} */
-
-
-/* ---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lugrasimo&display=swap');
 
 .homepage {
     padding: 40px;
@@ -79,6 +8,21 @@
 .hero {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.hero h1 {
+    color: #0B666A;
+}
+
+.hero h1>span {
+    color: #0b2ea2;
+}
+
+
+.hero p {
+    font-size: large;
+    margin-top: 10px;
+    font-family: 'Lugrasimo', cursive;
 }
 
 .features {
@@ -94,6 +38,12 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.featureCard:hover {
+    background-color: #0B666A;
+    color: aliceblue;
+    
+}
+
 .featureIcon {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -115,8 +65,8 @@
 }
 
 .imageSection img:hover {
-   filter:brightness(96%);
-   cursor: pointer;
+    filter: brightness(96%);
+    cursor: pointer;
 }
 
 /* Styles for larger screens */

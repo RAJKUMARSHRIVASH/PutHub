@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../../assets/PutHub_rm_bg3.png';
@@ -7,6 +7,22 @@ const Navbar: React.FC = () => {
   const [login, setLogin] = useState(false)
   const [active, setActive] = useState(false);
 
+  useEffect(() => {
+    checkLogin();
+  }, [login])
+
+
+  function checkLogin(): void {
+    var isLogin = localStorage.getItem("isLogin") || false;
+    // we can also use cookies over here instead of local storage
+
+    if (isLogin) {
+      setLogin(true)
+    }
+    else {
+      setLogin(false);
+    }
+  }
   const toggleMenu = () => {
     setActive(!active);
   };
@@ -44,7 +60,7 @@ const Navbar: React.FC = () => {
           </li>
           <li className={styles.nav_item}>
             <Link to="/login" className={styles.nav_links}>
-              Login
+              {login ? 'Logout' : "Login"}
             </Link>
           </li>
           <li className={styles.user_name}>

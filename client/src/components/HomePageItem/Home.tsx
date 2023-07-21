@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     return (
         <div className={styles.homepage}>
             <div className={styles.hero}>
-                <h1>Welcome to My Portfolio App</h1>
+                <h1>Welcome to Your Put<span>Hub</span></h1>
                 <p>
                     Manage your projects with ease. Keep track of tasks, resources, and project managers all in one place.
                 </p>

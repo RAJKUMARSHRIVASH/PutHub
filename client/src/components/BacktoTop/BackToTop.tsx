@@ -1,28 +1,32 @@
 import React, { useState } from "react";
+import backtotop from '../../assets/top.png'
+import styles from './BackToTop.module.css'
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const css = ():React.CSSProperties => {
-    return {
-      position: "fixed",
-      bottom: 20,
-      right: 20,
-      zIndex: 100,
-      display: isVisible ? "block" : "none",
-      opacity: 0.5,
-      transition: "opacity 0.5s ease-in-out",
-      outline:"auto"
-    };
-  };
-
-  const handleClick = () => {
+  if (window.scrollY >= 200) {
+    setIsVisible(true)
+  }
+  else {
     setIsVisible(false);
+  }
+  if (!isVisible) {
+    document.querySelector(".topIcon")?.classList.remove("active");
+  }
+  else {
+    document.querySelector(".topIcon")?.classList.add("active");
+  }
+  
+  const handleClick = () => {
+    window.scrollY = 0;
+    setIsVisible(false);
+   
   };
 
   return (
-    <div style={css()}>
-      <a href="#top" onClick={handleClick}>Back to top</a>
+    <div className={styles.topIcon} onClick={handleClick}>
+      <img src={backtotop} alt="back to top button" />
     </div>
   );
 };
