@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Home from '../../components/HomePageItem/Home'
 import BackToTop from '../../components/BacktoTop/BackToTop'
+import ContactUs from '../../components/Contact/Contact'
 
 export default function HomePage() {
     return (
@@ -10,6 +11,7 @@ export default function HomePage() {
             <Navbar />
             <Home />
             <BackToTop />
+            <ContactUs/>
             <Footer />
         </div>
     )

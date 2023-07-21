@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import backtotop from "../../assets/top.png";
 import styles from "./BackToTop.module.css";
 
@@ -10,8 +10,6 @@ const BackToTop = () => {
   };
 
   const handleScroll = () => {
-    console.log(window.scrollY);
-
     if (window.scrollY >= 400) {
       setActive(true)
     }

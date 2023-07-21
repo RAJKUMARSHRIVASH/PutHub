@@ -137,28 +137,6 @@ body {
     /* ... (existing styles) ... */
   }
 
-  /* .hamburger {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  .hamburger .bar {
-    background-color: #fff;
-    height: 2px;
-    width: 100%;
-    margin: 2px 0;
-    transition: all 0.3s ease-in-out;
-  } */
-
-  .hamburger .bar {
-    /* ... (existing styles) ... */
-  }
-
   .hamburger.active .bar:first-child {
     transform: rotate(45deg) translate(6px, 6px);
   }
