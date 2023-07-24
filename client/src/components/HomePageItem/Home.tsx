@@ -24,7 +24,6 @@ const Home: React.FC = () => {
                 </p>
             </div>
             <div className={styles.features}>
-                <h2>Features</h2>
                 <animated.div className={styles.featureCard} style={featureCardAnimation}>
                     <img className={styles.featureIcon} src={taskpng} alt="" />
                     <div>

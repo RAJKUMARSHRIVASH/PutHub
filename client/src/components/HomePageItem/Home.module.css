@@ -65,6 +65,9 @@
     text-align: center;
     margin-bottom: 40px;
 }
+.features  h2{
+    color: #0b2ea2;
+}
 
 .featureCard {
     background-color: white;

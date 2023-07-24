@@ -83,6 +83,9 @@ body {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
+.user_name{
+  color: #fff;
+}
 
 /* Styles for tablet and mobile screens */
 @media screen and (max-width: 767px) {
@@ -118,11 +121,14 @@ body {
   }
 
   .nav_links {
-    font-size: 1.3rem;
+    font-size: medium;
     padding: 10px;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
+  }
+  .user_name{
+    font-size: medium;
   }
 
   .nav_links:hover {
