@@ -60,3 +60,11 @@ button:hover {
     color: rgb(73, 164, 244);
     text-decoration: none;
 }
+
+
+@media screen and (max-width: 550px) {
+    .container{
+        width: 80%;
+        max-width: 250px;
+    }
+}

@@ -19,7 +19,7 @@ const Home: React.FC = () => {
                 <div className={styles.typingAnimation}>
                     <h1 className={styles.text}>Welcome to Your <span>PutHub</span></h1>
                 </div>
-                <p>
+                <p >
                     Manage your projects with ease. Keep track of tasks, resources, and project managers all in one place.
                 </p>
             </div>
