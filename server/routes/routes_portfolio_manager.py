@@ -74,7 +74,7 @@ def login():
     jwt_secret = key  # Replace this with your own secret key
     token = jwt.encode(jwt_payload, jwt_secret, algorithm='HS256')
 
-    return jsonify({'message': 'Login successful!', 'token': token}), 200
+    return jsonify({'message': 'Login successful!', 'token': token,"username":portfolio_manager["name"]}), 200
 
 
 # Getting all managers
