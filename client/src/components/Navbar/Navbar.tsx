@@ -2,27 +2,36 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../../assets/PutHub_rm_bg3.png';
+import Cookies from 'js-cookie';
 
 const Navbar: React.FC = () => {
-  const [login, setLogin] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
   const [active, setActive] = useState(false);
+  const [username, setUsername] = useState('');
 
   useEffect(() => {
-    checkLogin();
-  }, [login])
+    checkLoginStatus();
+  }, []);
 
-
-  function checkLogin(): void {
-    var isLogin = localStorage.getItem("isLogin") || false;
-    // we can also use cookies over here instead of local storage
-
-    if (isLogin) {
-      setLogin(true)
-    }
-    else {
-      setLogin(false);
+  function checkLoginStatus(): void {
+    const userData = Cookies.get("userdata");
+    if (userData) {
+      const parsedData = JSON.parse(userData);
+      const userUsername = parsedData.username;
+      setUsername(userUsername);
+      setIsLoggedIn(true);
+    } else {
+      setUsername('');
+      setIsLoggedIn(false);
     }
   }
+
+  const handleLogout = (): void => {
+    Cookies.remove("userdata"); // Clear the user data from cookies
+    setIsLoggedIn(false); // Update the login status to log the user out
+  };
+
   const toggleMenu = () => {
     setActive(!active);
   };
@@ -59,12 +68,16 @@ const Navbar: React.FC = () => {
             </Link>
           </li>
           <li className={styles.nav_item}>
-            <Link to="/login" className={styles.nav_links}>
-              {login ? 'Logout' : "Login"}
-            </Link>
+          {isLoggedIn ? (
+              <button className={styles.logoutBtn} onClick={handleLogout}>Logout</button>
+            ) : (
+              <Link to="/login" className={styles.nav_links}>
+                Login
+              </Link>
+            )}
           </li>
           <li className={styles.user_name}>
-            {login ? `Hi, ${"name"}` : null}
+            {isLoggedIn ? `Hi, ${username}` : null}
           </li>
         </ul>
       </div>

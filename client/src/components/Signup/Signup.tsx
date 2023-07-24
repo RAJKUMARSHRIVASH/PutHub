@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import styles from './Signup.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
+import { FadeLoader } from 'react-spinners';
 
 const Signup: React.FC = () => {
 
   // const baseURL = 'http://localhost:8080'
-const baseURL = 'https://puthub-backend-api-flask.onrender.com';
+  const baseURL = 'https://puthub-backend-api-flask.onrender.com';
 
-
+  const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
@@ -22,9 +23,9 @@ const baseURL = 'https://puthub-backend-api-flask.onrender.com';
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     const fData = await fetch(`${baseURL}/signup`, {
       method: "POST",
       headers: {
@@ -34,6 +35,7 @@ const baseURL = 'https://puthub-backend-api-flask.onrender.com';
     });
 
     const response = await fData.json();
+    setIsLoading(false)
     Swal.fire(response.message);
     if (response.message == "User created successfully!") {
       navigate("/login")
@@ -83,6 +85,11 @@ const baseURL = 'https://puthub-backend-api-flask.onrender.com';
         />
 
         <button type="submit">Signup</button>
+        {isLoading && (
+          <div className={styles.loading} style={{ textAlign: 'center',margin:"auto", marginTop: '20px' }}>
+            <FadeLoader color="#36d7b7" loading={isLoading} />
+          </div>
+        )}
       </form>
       <div className={styles.navigate}>
         <p>Have you registered already? <Link className={styles.signBtn} to='/login'>Login 👈</Link></p>
