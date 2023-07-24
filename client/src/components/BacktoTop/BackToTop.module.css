@@ -18,10 +18,12 @@ body {
 .topIcon img {
   width: 40px;
   transition: 0.5s;
+  opacity: 0.6;
 }
 
 .topIcon img:hover {
   transform: scale(1.15);
   cursor: pointer;
   transition: 0.5s;
+  opacity: 0.9;
 }

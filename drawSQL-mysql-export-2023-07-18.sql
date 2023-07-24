@@ -17,7 +17,6 @@ CREATE TABLE `Task`(
 CREATE TABLE `PortfolioManager`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
-    `status` VARCHAR(255) NOT NULL,
     `role` VARCHAR(255) NOT NULL,
     `bio` TEXT NOT NULL,
     `start_date` DATE NOT NULL

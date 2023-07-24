@@ -1,3 +1,7 @@
+body {
+    background-color: #fceefa;
+}
+
 .container {
     max-width: 400px;
     margin: 100px auto;
@@ -18,11 +22,17 @@ h2 {
     flex-direction: column;
 }
 
-input {
+input,
+select,
+textarea {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #fff9f9;
     border-radius: 4px;
+}
+
+#bio {
+    height: 50px;
 }
 
 button {

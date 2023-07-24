@@ -14,7 +14,6 @@ function AllRoutes() {
             <Route path='/signup' element={<SignupPage/>}/>
             <Route path='/services' element={<SignupPage/>}/>
             <Route path='*' element={<NotFoundPage/>}/>
-
         </Routes>
     )
 }
