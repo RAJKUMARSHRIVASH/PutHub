@@ -1,6 +1,20 @@
 # PutHub
-This is portfolio management system for the managers to manage their all projects.
+This is the portfolio management system for the managers to manage their all projects.
+## Features
 
+- Cross-platform
+- Responsive
+- CRUD
+- Roll-Based Access System
+- Login / Signup
+
+## Tech Stack
+
+**Framework:** Vite
+
+**Frontend:** React, typescript, CSS, HTML
+
+**Backend:** Python, Flask
 
 ## Folder Structure
 
@@ -47,23 +61,6 @@ PutHub/
     ├── app.py
     └── README.md
 ```
-## ER diagram
-![](https://i.imgur.com/vxQed7U.png)
-
-
-## Features
-
-- Cross-platform
-- Responsive
-- CRUD
-- Roll-Based Access System
-- Login / Signup
-
-## Tech Stack
-
-**Frontend:** React, typescript, CSS, HTML
-
-**Backend:** Python, Flask
 
 ## Run Locally
 
@@ -121,6 +118,15 @@ This will install Flask in the **`my_env`** environment, not in your global Pyth
 ```
 deactivate
 ```
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`MONGOURL`
+
+`JWTSECRETKEY`
+
+`PORT`
 
 Start the server
 
@@ -138,69 +144,69 @@ http://localhost:8080/
 ### Welcome 
 
 #### POST | GET | PATCH | DELETE
-```http
+```HTTP
   POST /signup
 ```
-```http
+```HTTP
   POST /login
 ```
-```http
+```HTTP
   GET /portfolio-managers
 ```
-```http
+```HTTP
   GET /portfolio-managers/<string:id>
 ```
-```http
+```HTTP
   PATCH /portfolio-managers/<string:id>
 ```
-```http
+```HTTP
   DELETE /portfolio-managers/<string:id>
 ```
-```http
-  POST /proejcts
+```HTTP
+  POST /projects
 ```
-```http
-  GET /proejcts
+```HTTP
+  GET /projects
 ```
-```http
+```HTTP
   GET /projects/<string:id>
 ```
-```http
+```HTTP
   PATCH /projects/<string:id>
 ```
-```http
+```HTTP
   DELETE /projects/<string:id>
 ```
 
-```http
+```HTTP
   POST /resources
 ```
-```http
+```HTTP
   GET /resources
 ```
-```http
+```HTTP
   GET /resources/<string:id>
 ```
-```http
+```HTTP
   PATCH /resources/<string:id>
 ```
-```http
+```HTTP
   DELETE /resources/<string:id>
 ```
 
-```http
+```HTTP
   POST /tasks
 ```
-```http
+```HTTP
   GET /tasks
 ```
-```http
+```HTTP
   GET /tasks/<string:id>
 ```
-```http
+```HTTP
   PATCH /tasks/<string:id>
 ```
-```http
+```HTTP
   DELETE /tasks/<string:id>
 ```
 
@@ -218,7 +224,22 @@ https://puthub-backend-api-flask.onrender.com
 
 ![App Screenshot]()
 
+## System Architecture
+![SD image](https://i.imgur.com/oJW6QQe.jpeg)
+
+## ER diagram
+![ER](https://i.imgur.com/vxQed7U.png)
+
 ## Author
 
 - [@Raj Kumar Sen](https://github.com/RAJKUMARSHRIVASH)
 
+## Attribution :-
+
+Special Thanks to -
+ -  flaticon.com
+ -  freepik.com
+ -  imagur.com
+ -  MongoDB Atlas
+
+Thanks for visiting 👍
